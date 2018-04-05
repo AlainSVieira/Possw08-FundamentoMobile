@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">petdoe</string>
+
+    <string name="title_ong">ONG</string>
+    <string name="title_donation">DOAÇÃO</string>
+    <string name="title_goal">META</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="ong">Ong</string>
+    <string name="description_name">Ong Vida Animal</string>
+    
+    <string name="mission">contribuir com Protetores independentes que abrigam animais abandonados e
+        resgatados de situações de risco, através de doação de ração e cuidados com a saúde dos
+        animais, oferecendo também suporte e consultoria aos Protetores, para que possam melhorar
+        as condições em que vivem esses animais.</string>
+
+    <string name="cnpj">Cnpj</string>
+
+    <string name="description_cnpj">31.206.944/0001-43</string>
+
+    <string name="about">Sobre</string>
+
+    <string name="address">Endereço</string>
+
+    <string name="description_address">Rua Senador Filinto Miller, Dom Pedro - Manaus - AM</string>
+
+    <string name="phone">Telefone</string>
+
+    <string name="description_phone">(092) 991784578</string>
+
+    <string name="email">E-mail</string>
+    <string name="description_email">ong.pet@gmail.com</string>
+    <string name="goal">Meta</string>
+    <string name="goal_description">R$ 500,00 </string>
+
+    <string name="goal_animal_name">Aninha</string>
+    <string name="goal_description_about">Aninha precisa de medicamentos, sua meta é de 500 reais, pois esta gripada.
+        Aninha tem 3 anos, é muito linda e amorosa, ajude aninha a ter boa saúde e contribua com qualquer valor.</string>
+    <string name="name_donor">Nome</string>
+    <string name="description_name_donor">João Alfredo Silva</string>
+    <string name="ticket">Boleto</string>
+    <string name="credit">Crédito</string>
+    <string name="debit">Débito</string>
+    <string name="amount">Valor</string>
+
+
+</resources>
