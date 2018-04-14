@@ -1,18 +1,24 @@
 package petdoe.com.br.petdoe.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 import petdoe.com.br.petdoe.R;
 import petdoe.com.br.petdoe.adapter.holder.OngHolder;
+import petdoe.com.br.petdoe.model.pojo.Ong;
 
 /**
  * Created by Mychelle Rocha on 02/04/2018.
  */
 public class OngAdapter extends RecyclerView.Adapter<OngHolder> {
+    private List<Ong> mListOng;
 
 
     private final int[] images = {
@@ -34,12 +40,9 @@ public class OngAdapter extends RecyclerView.Adapter<OngHolder> {
     private final Context mContext;
 
 
-    public OngAdapter(
-            final Context context) {
-
+    public OngAdapter(final Context context, final List<Ong> listOng) {
         this.mContext = context;
-
-
+        this.mListOng = listOng;
     }
 
     /**
@@ -70,6 +73,17 @@ public class OngAdapter extends RecyclerView.Adapter<OngHolder> {
         OngHolder newsViewHolder = holder;
         holder.mImgOng.setImageDrawable(mContext.getDrawable(images[position]));
         holder.mNameOng.setText(namesOng[position]);
+        holder.mNameOng.setText(mListOng.get(position).getNome());
+        holder.mCardNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putLong("ID_ONG", mListOng.get(position).getId());
+                final Intent intent = new Intent("petdoe.com.br.petdoe.DETAIL_ONG");
+                intent.putExtras(bundle);
+                mContext.startActivity(intent);
+            }
+        });
 
     }
     //   }
@@ -84,7 +98,7 @@ public class OngAdapter extends RecyclerView.Adapter<OngHolder> {
      */
     @Override
     public int getItemCount() {
-        return 5;
+        return mListOng.size();
     }
 }
 

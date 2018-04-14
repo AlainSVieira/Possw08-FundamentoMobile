@@ -43,8 +43,7 @@
                 android:id="@+id/txt_description_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/description_name" />
+                android:layout_marginLeft="16dp"/>
 
             <TextView
                 android:id="@+id/txt_about"
@@ -57,8 +56,7 @@
                 android:id="@+id/txt_description_about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/mission" />
+                android:layout_marginLeft="16dp"/>
 
             <TextView
                 android:id="@+id/txt_cnpj"
@@ -71,8 +69,7 @@
                 android:id="@+id/txt_description_cnpj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/description_cnpj" />
+                android:layout_marginLeft="16dp"/>
 
             <TextView
                 android:id="@+id/txt_address"
@@ -85,8 +82,7 @@
                 android:id="@+id/txt_description_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/description_address" />
+                android:layout_marginLeft="16dp" />
 
 
             <TextView
@@ -100,8 +96,7 @@
                 android:id="@+id/txt_description_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/description_phone" />
+                android:layout_marginLeft="16dp" />
 
             <TextView
                 android:id="@+id/txt_email"
@@ -114,8 +109,7 @@
                 android:id="@+id/txt_description_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:text="@string/description_email" />
+                android:layout_marginLeft="16dp"/>
         </LinearLayout>
     </ScrollView>
 

@@ -1,19 +1,26 @@
 package petdoe.com.br.petdoe.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 import petdoe.com.br.petdoe.R;
 import petdoe.com.br.petdoe.adapter.holder.GoalHolder;
+import petdoe.com.br.petdoe.model.pojo.Meta;
 
 /**
  * Created by Home on 03/04/2018.
  */
 
 public class GoalAdapter extends RecyclerView.Adapter<GoalHolder> {
+
+    private List<Meta> mListMeta;
 
 
     private final int[] images = {
@@ -36,9 +43,10 @@ public class GoalAdapter extends RecyclerView.Adapter<GoalHolder> {
 
 
     public GoalAdapter(
-            final Context context) {
+            final Context context, final List<Meta> listMeta) {
 
         this.mContext = context;
+        this.mListMeta = listMeta;
 
 
     }
@@ -69,7 +77,18 @@ public class GoalAdapter extends RecyclerView.Adapter<GoalHolder> {
     public void onBindViewHolder(final GoalHolder holder,
                                  final int position) {
         holder.mImgOng.setImageDrawable(mContext.getDrawable(images[position]));
-        holder.mNameOng.setText(namesOng[position]);
+        holder.mNameOng.setText(mListMeta.get(position).getIdPet().getNome());
+        holder.mCardNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putLong("ID_META", mListMeta.get(position).getId());
+                final Intent intent = new Intent("petdoe.com.br.petdoe.DETAIL_GOAL");
+                intent.putExtras(bundle);
+                mContext.startActivity(intent);
+            }
+        });
+
 
     }
     //   }
